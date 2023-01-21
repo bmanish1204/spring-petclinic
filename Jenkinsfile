@@ -7,12 +7,12 @@ pipeline {
       }
     }
 
-    stage('Static Analysis') {
+    stage('Static analysis') {
       steps {
-        sh '''mvn clean sonar:sonar \\
+        sh '''mvn clean verify sonar:sonar \\
   -Dsonar.projectKey=Petclinic \\
   -Dsonar.host.url=http://172.31.23.44:9000 \\
-  -Dsonar.login=sqp_bff2fea384cb01d3ec9fa9ad448753d4093c93a4'''
+  -Dsonar.login=sqp_868c847dbf546e1eac64db0c5c1b5726b90906f3'''
       }
     }
 
