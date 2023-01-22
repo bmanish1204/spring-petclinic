@@ -16,9 +16,9 @@ pipeline {
       }
     }
 
-    stage('Unit Test') {
+    stage('Unit test') {
       steps {
-        sh './mvnw "-Dtest=**/Petclinic_MB/*/*.java" test'
+        sh './mvnw "-Dtest=**/petclinic/*/*.java" test'
       }
     }
 
